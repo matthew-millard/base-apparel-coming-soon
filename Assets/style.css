@@ -1,0 +1,156 @@
+/* CSS Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Global Styles */
+
+/* Colors */
+:root {
+    --main-desat-red: rgb(206, 151, 151);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grey-red: hsla(0, 6%, 24%, 1);
+    --gradient-white-grey: Linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    
+}
+
+
+/* Fonts */
+p {
+    color: var(--main-desat-red);
+}
+
+::placeholder {
+    color: var(--main-desat-red);
+    opacity: 0.5;
+}
+
+
+/* Mobile First */
+
+.page-container {
+    min-height: 100vh;
+}
+
+.header__logo {
+    width: 100px;
+    margin: 30px;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__content {
+    width: 85%;
+    text-align: center;
+}
+
+.main__header {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 42px;
+    letter-spacing: 10px;
+    line-height: 1;
+    color: var(--dark-grey-red)
+}
+
+.main__header > span {
+    font-weight: 300; /* Overwrites main header styling*/
+    color: var(--main-desat-red); /* accent */
+}
+
+.main__inputs {
+    position: relative;
+}
+
+.main__inputs input[type="email"] {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid var(--main-desat-red);
+    padding: 10px 20px;
+}
+
+.main__inputs button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 69px;
+    height: 46px;
+    border-radius: 100px;
+    border: 0;
+    background: Linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0px 10px 20px rgba(206, 151, 151, 0.5);
+}
+
+.main__inputs button > img {
+    margin: 0 auto;
+}
+
+
+.image-banner__container,
+.main__content > * {
+    padding-bottom: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.desktop-image-hidden {
+    display: none;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .desktop-image-hidden {
+        display: initial;
+    }
+    .mobile-image-hidden {
+        display: none;
+    }
+}
+
